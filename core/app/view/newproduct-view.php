@@ -136,12 +136,12 @@ $categories = CategoryData::getAll();
   </div>
 
 
-  <div class="form-group">
-    <label for="inputEmail1" class="col-lg-3 control-label">Inventario inicial:</label>
-    <div class="col-md-6">
-      <input type="text" name="q" class="form-control" id="inputEmail1" placeholder="Inventario inicial">
-    </div>
-  </div>
+  <!--<div class="form-group">-->
+  <!--  <label for="inputEmail1" class="col-lg-3 control-label">Inventario inicial:</label>-->
+  <!--  <div class="col-md-6">-->
+  <!--    <input type="text" name="q" class="form-control" id="inputEmail1" placeholder="Inventario inicial">-->
+  <!--  </div>-->
+  <!--</div>-->
 
   <!-- <div class="form-group">
     <label for="inputEmail1" class="col-lg-3 control-label">Fecha de caducidad:</label>
