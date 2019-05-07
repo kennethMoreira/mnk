@@ -45,7 +45,7 @@ $categories = CategoryData::getAll();
   <div class="form-group">
     <label for="inputEmail1" class="col-lg-3 control-label">Nombre</label>
     <div class="col-md-6">
-      <input type="text" name="name" required class="form-control" id="name" placeholder="Nombre del Producto">
+      <input type="text" name="name" required class="form-control" id="name" placeholder="Nombre del Producto" autofocus>
     </div>
   </div>
   <!-- <div class="form-group">
