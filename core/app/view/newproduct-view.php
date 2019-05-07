@@ -13,7 +13,7 @@ $categories = CategoryData::getAll();
   <td>
 		<form class="form-horizontal" method="post" enctype="multipart/form-data" id="addproduct" action="index.php?view=addproduct" role="form">
 
-  <div class="form-group">
+  <!-- <div class="form-group">
     <label for="inputEmail1" class="col-lg-3 control-label">Tipo</label>
     <div class="col-md-6">
     <select name="kind" class="form-control">
@@ -21,7 +21,7 @@ $categories = CategoryData::getAll();
     <option value="2">Servicio</option>
       </select>    
       </div>
-  </div>
+  </div> -->
 
   <div class="form-group">
     <label for="inputEmail1" class="col-lg-3 control-label">Imagen</label>
@@ -30,7 +30,7 @@ $categories = CategoryData::getAll();
     </div>
   </div>
   <div class="form-group">
-    <label for="inputEmail1" class="col-lg-3 control-label">Codigo Interno*</label>
+    <label for="inputEmail1" class="col-lg-3 control-label">Codigo</label>
     <div class="col-md-6">
       <input type="text" name="code" id="product_code" class="form-control" id="barcode" placeholder="Codigo Interno">
     </div>
@@ -48,7 +48,7 @@ $categories = CategoryData::getAll();
       <input type="text" name="name" required class="form-control" id="name" placeholder="Nombre del Producto">
     </div>
   </div>
-  <div class="form-group">
+  <!-- <div class="form-group">
     <label for="inputEmail1" class="col-lg-3 control-label">Categoria</label>
     <div class="col-md-6">
     <select name="category_id" class="form-control">
@@ -57,7 +57,8 @@ $categories = CategoryData::getAll();
       <option value="<?php echo $category->id;?>"><?php echo $category->name;?></option>
     <?php endforeach;?>
       </select>    </div>
-  </div>
+  </div> -->
+
   <div class="form-group">
     <label for="inputEmail1" class="col-lg-3 control-label">Marca</label>
     <div class="col-md-6">
@@ -94,6 +95,7 @@ $categories = CategoryData::getAll();
 
   //});
   </script>
+<!--   
   <div class="form-group">
     <label for="inputEmail1" class="col-lg-3 control-label">Unidad*</label>
     <div class="col-md-6">
@@ -123,7 +125,7 @@ $categories = CategoryData::getAll();
       <input type="text" name="weight"  class="form-control" placeholder="Peso">
     </div>
 
-  </div>
+  </div> -->
 
   <div class="form-group">
     <label for="inputEmail1" class="col-lg-3 control-label">Minima en inventario:</label>
@@ -139,12 +141,13 @@ $categories = CategoryData::getAll();
       <input type="text" name="q" class="form-control" id="inputEmail1" placeholder="Inventario inicial">
     </div>
   </div>
-  <div class="form-group">
+
+  <!-- <div class="form-group">
     <label for="inputEmail1" class="col-lg-3 control-label">Fecha de caducidad:</label>
     <div class="col-md-6">
       <input type="date" name="expire_at" class="form-control" id="inputEmail1" placeholder="Fecha de caducidad">
     </div>
-  </div>
+  </div> -->
 
   <div class="form-group">
     <div class="col-lg-offset-2 col-lg-10">

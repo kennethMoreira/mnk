@@ -30,7 +30,7 @@ if($product!=null):
   </div>
 
   <div class="form-group">
-    <label for="inputEmail1" class="col-lg-3 control-label">Codigo Interno*</label>
+    <label for="inputEmail1" class="col-lg-3 control-label">Codigo</label>
     <div class="col-md-6">
       <input type="text" name="code" class="form-control" id="code" value="<?php echo $product->code; ?>" placeholder="Codigo Interno del Producto">
     </div>
@@ -49,7 +49,7 @@ if($product!=null):
       <input type="text" name="name" class="form-control" id="name" value="<?php echo $product->name; ?>" placeholder="Nombre del Producto">
     </div>
   </div>
-    <div class="form-group">
+    <!-- <div class="form-group">
     <label for="inputEmail1" class="col-lg-3 control-label">Categoria</label>
     <div class="col-md-6">
     <select name="category_id" class="form-control">
@@ -58,7 +58,7 @@ if($product!=null):
       <option value="<?php echo $category->id;?>" <?php if($product->category_id!=null&& $product->category_id==$category->id){ echo "selected";}?>><?php echo $category->name;?></option>
     <?php endforeach;?>
       </select>    </div>
-  </div>
+  </div> -->
 
   <div class="form-group">
     <label for="inputEmail1" class="col-lg-3 control-label">Marca</label>
@@ -90,7 +90,7 @@ if($product!=null):
       <input type="text" name="price_out" class="form-control" id="price_out" value="<?php echo $product->price_out; ?>" placeholder="Precio de salida">
     </div>
   </div>
-  <div class="form-group">
+  <!-- <div class="form-group">
     <label for="inputEmail1" class="col-lg-3 control-label">Unidad*</label>
     <div class="col-md-6">
       <input type="text" name="unit" class="form-control" id="unit" value="<?php echo $product->unit; ?>" placeholder="Unidad del Producto">
@@ -117,7 +117,7 @@ if($product!=null):
       <input type="text" name="weight" value="<?php echo $product->weight; ?>" class="form-control" placeholder="Peso">
     </div>
 
-  </div>
+  </div> -->
 
   <div class="form-group">
     <label for="inputEmail1" class="col-lg-3 control-label">Minima en inventario:</label>
@@ -125,12 +125,12 @@ if($product!=null):
       <input type="text" name="inventary_min" class="form-control" value="<?php echo $product->inventary_min;?>" id="inputEmail1" placeholder="Minima en Inventario (Default 10)">
     </div>
   </div>
-  <div class="form-group">
+  <!-- <div class="form-group">
     <label for="inputEmail1" class="col-lg-3 control-label">Fecha de caducidad:</label>
     <div class="col-md-6">
       <input type="date" name="expire_at" class="form-control" value="<?php echo $product->expire_at;?>" id="inputEmail1" placeholder="Fecha de caducidad (Default 10)">
     </div>
-  </div>
+  </div> -->
 
   <div class="form-group">
     <label for="inputEmail1" class="col-lg-3 control-label" >Esta activo</label>

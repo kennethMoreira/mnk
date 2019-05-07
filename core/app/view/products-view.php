@@ -47,10 +47,10 @@ if(count($products)>0){
 		<th>Nombre</th>
 		<th>Precio Entrada</th>
 		<th>Precio Salida</th>
-		<th>Categoria</th>
+		<!-- <th>Categoria</th> -->
 		<th>Minima</th>
-    <th>F. caducidad</th>
-    <th>Tipo</th>
+    <!-- <th>F. caducidad</th> -->
+    <!-- <th>Tipo</th> -->
 		<th>Activo</th>
 		<th></th>
 	</thead>
@@ -65,10 +65,10 @@ if(count($products)>0){
 		<td><?php echo $product->name; ?></td>
 		<td><?php echo $currency; ?> <?php echo number_format($product->price_in,2,'.',','); ?></td>
 		<td><?php echo $currency; ?> <?php echo number_format($product->price_out,2,'.',','); ?></td>
-		<td><?php if($product->category_id!=null){echo $product->getCategory()->name;}else{ echo "<center>----</center>"; }  ?></td>
+		<!-- <td><?php if($product->category_id!=null){echo $product->getCategory()->name;}else{ echo "<center>----</center>"; }  ?></td> -->
 		<td><?php echo $product->inventary_min; ?></td>
-    <td><?php echo $product->expire_at; ?></td>
-<td>
+    <!-- <td><?php echo $product->expire_at; ?></td> -->
+<!-- <td>
   <?php
 if($product->kind==1){
   echo "<span class='label label-info'>Producto</span>";
@@ -79,7 +79,7 @@ if($product->kind==1){
   ?>
 
 
-</td>
+</td> -->
 		<td><?php if($product->is_active): ?><i class="fa fa-check"></i><?php endif;?></td>
 		
 
