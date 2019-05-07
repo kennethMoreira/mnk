@@ -38,9 +38,9 @@ if(count($products)>0){
 	<thead>
 		<th>Codigo</th>
 		<th>Nombre</th>
-		<th>Por Recibir</th>
+		<!--<th>Por Recibir</th>-->
 		<th>Disponible</th>
-		<th>Por Entregar</th>
+		<!--<th>Por Entregar</th>-->
 		<th></th>
 	</thead>
 	<?php foreach($products as $product):
@@ -51,15 +51,15 @@ if(count($products)>0){
 	<tr class="<?php if($q<=$product->inventary_min/2){ echo "danger";}else if($q<=$product->inventary_min){ echo "warning";}?>">
 		<td><?php echo $product->code; ?></td>
 		<td><?php echo $product->name; ?></td>
-		<td>
-			<?php echo $r; ?>
-		</td>
+		<!--<td>-->
+		<!--	<?php echo $r; ?>-->
+		<!--</td>-->
 		<td>
 			<?php echo $q; ?>
 		</td>
-		<td>
-			<?php echo $d; ?>
-		</td>
+		<!--<td>-->
+		<!--	<?php echo $d; ?>-->
+		<!--</td>-->
 		<td style="width:213px;">
 <!--		<a href="index.php?view=input&product_id=<?php echo $product->id; ?>" class="btn btn-xs btn-primary"><i class="glyphicon glyphicon-circle-arrow-up"></i> Alta</a>-->
 
