@@ -27,6 +27,7 @@ if(count($products)>0){
 	<thead>
 		<th>Codigo</th>
 		<th>Nombre</th>
+    <th>Marca</th>
     <?php foreach($sucursales as $suc):?>
 		<th><?php echo $suc->name; ?></th>
     <?php endforeach; ?>
@@ -37,6 +38,7 @@ if(count($products)>0){
   <?php $total=0; ?>
 		<td><?php echo $product->code; ?></td>
 		<td><?php echo $product->name; ?></td>
+    <td><?php if($product->brand_id!=null){echo $product->getBrand()->name;}else{ echo "----"; }  ?></td>
     <?php foreach($sucursales as $suc):?>
 		<td>
 			<?php 
