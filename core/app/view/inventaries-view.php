@@ -43,8 +43,8 @@ if(count($products)>0){
 
     <?php foreach(BrandData::getAll() as $category):?>
       <?php echo $category->id;
-      if($product->brand_id!=null&& $product->brand_id==$category->id){ echo "----";}
-      echo $category->name;
+      if($product->brand_id!=null&& $product->brand_id==$category->id){ echo $category->name;}
+      echo "---";
       ?>
     <?php endforeach;?>
 
