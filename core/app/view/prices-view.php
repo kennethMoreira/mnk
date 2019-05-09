@@ -31,7 +31,7 @@ if(count($products)>0){
 		<th>Codigo</th>
 		<th>Imagen</th>
     <th>Nombre</th>
-    <th>Marca<th>
+    <th>Marca</th>
 		<th>Precio Default</th>
 		
 		<th></th>
@@ -47,14 +47,10 @@ $price = $product->price_out;
 			<?php endif;?>
 		</td>
     <td><?php echo $product->name; ?></td>
-    <td>
-    <?php foreach(BrandData::getAll() as $category):?>
-      <?php 
-      if($product->brand_id!=null&& $product->brand_id==$category->id){ echo $category->name;} 
-      
-      ?>
-    <?php endforeach;?>
-    </td>
+    <td><?php foreach(BrandData::getAll() as $category):?>
+      <?php if($product->brand_id!=null&& $product->brand_id==$category->id){ echo $category->name;}?>
+    <?php endforeach;?></td>
+
 		<td><?php echo $currency; ?> <?php echo number_format($product->price_out,2,'.',','); ?></td>
 		
 		
