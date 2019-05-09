@@ -6,8 +6,7 @@
     <i class="fa fa-download"></i> Descargar <span class="caret"></span>
   </button>
   <ul class="dropdown-menu" role="menu">
-    <li><a href="report/byreceive-word.php">Word 2007 (.docx)</a></li>
-    <li><a href="report/byreceive-xlsx.php">Excel 2007 (.xlsx)</a></li>
+ 
 <li><a onclick="thePDF()" id="makepdf" class="">PDF (.pdf)</a></li>
 
   </ul>

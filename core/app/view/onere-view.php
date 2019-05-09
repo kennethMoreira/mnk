@@ -12,7 +12,7 @@ $iva_val = ConfigurationData::getByPreffix("imp-val")->val;
   <ul class="dropdown-menu" role="menu">
     <li><a href="ticket-re.php?id=<?php echo $_GET["id"];?>">Ticket (.pdf)</a></li>
 <li><a onclick="thePDF()" id="makepdf" class=""><i class="fa fa-download"></i> Descargar PDF</a>
-    <li><a href="report/onere-word.php?id=<?php echo $_GET["id"];?>">Word 2007 (.docx)</a></li>
+   
   </ul>
 </div>
 <h1>Resumen de Reabastecimiento #<?php echo $sell->id;?></h1>

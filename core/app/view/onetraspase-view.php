@@ -4,7 +4,7 @@
     <i class="fa fa-download"></i> Descargar <span class="caret"></span>
   </button>
   <ul class="dropdown-menu" role="menu">
-    <li><a href="report/onetraspase-word.php?id=<?php echo $_GET["id"];?>">Word 2007 (.docx)</a></li>
+
 <li><a onclick="thePDF()" id="makepdf" class=""><i class="fa fa-download"></i> Descargar PDF</a>
   </ul>
 </div>

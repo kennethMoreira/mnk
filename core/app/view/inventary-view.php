@@ -10,8 +10,7 @@ $stock = StockData::getById($_GET["stock"]);
     <i class="fa fa-download"></i> Descargar <span class="caret"></span>
   </button>
   <ul class="dropdown-menu" role="menu">
-    <li><a href="report/inventary-word.php?stock_id=<?php echo $stock->id; ?>">Word 2007 (.docx)</a></li>
-    <li><a href="report/inventary-xlsx.php?stock_id=<?php echo $stock->id; ?>">Excel 2007 (.xlsx)</a></li>
+ 
 <li><a onclick="thePDF()" id="makepdf" class="">PDF (.pdf)</a>
   </ul>
 </div>

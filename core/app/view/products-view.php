@@ -18,8 +18,7 @@
     <i class="fa fa-download"></i> Descargar <span class="caret"></span>
   </button>
   <ul class="dropdown-menu" role="menu">
-    <li><a href="report/products-word.php">Word 2007 (.docx)</a></li>
-    <li><a href="report/products-xlsx.php">Excel (.xlsx)</a></li>
+
 <li><a onclick="thePDF()" id="makepdf" class="">PDF (.pdf)</a>
 
   </ul>
@@ -64,15 +63,14 @@ if(count($products)>0){
 			<?php endif;?>
 		</td>
 		<td><?php echo $product->name; ?></td>
+   
     <td>
-
     <?php foreach(BrandData::getAll() as $category):?>
       <?php 
       if($product->brand_id!=null&& $product->brand_id==$category->id){ echo $category->name;} 
       
       ?>
     <?php endforeach;?>
-
     </td>
     
 		<td><?php echo $currency; ?> <?php echo number_format($product->price_in,2,'.',','); ?></td>
