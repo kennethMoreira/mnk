@@ -38,6 +38,7 @@ if(count($products)>0){
 	<thead>
 		<th>Codigo</th>
 		<th>Nombre</th>
+    <th> Marca</th>
 		<!--<th>Por Recibir</th>-->
 		<th>Disponible</th>
 		<!--<th>Por Entregar</th>-->
@@ -51,6 +52,16 @@ if(count($products)>0){
 	<tr class="<?php if($q<=$product->inventary_min/2){ echo "danger";}else if($q<=$product->inventary_min){ echo "warning";}?>">
 		<td><?php echo $product->code; ?></td>
 		<td><?php echo $product->name; ?></td>
+    <td>
+
+    <?php foreach(BrandData::getAll() as $category):?>
+      <?php 
+      if($product->brand_id!=null&& $product->brand_id==$category->id){ echo $category->name;} 
+      
+      ?>
+    <?php endforeach;?>
+
+    </td>
 		<!--<td>-->
 		<!--	<?php echo $r; ?>-->
 		<!--</td>-->
@@ -114,9 +125,9 @@ var columns = [
 //    {title: "Reten", dataKey: "reten"},
     {title: "Codigo", dataKey: "code"}, 
     {title: "Nombre del Producto", dataKey: "product"}, 
-    {title: "Por Recibir", dataKey: "pr"}, 
+    
     {title: "Disponible", dataKey: "disponible"}, 
-    {title: "Por Enviar", dataKey: "pv"}, 
+    
 //    ...
 ];
 
@@ -131,9 +142,9 @@ var rows = [
     {
       "code": "<?php echo $product->code; ?>",
       "product": "<?php echo $product->name; ?>",
-      "pr": "<?php echo $r;?>",
+      
       "disponible": "<?php echo $q;?>",
-      "pv": "<?php echo $d; ?>",
+      
       },
  <?php endforeach; ?>
 ];
