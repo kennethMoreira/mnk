@@ -8,11 +8,11 @@ $operations = OperationData::getAllByProductIdAndStock($product->id,$stock->id);
 <div class="row">
 	<div class="col-md-12">
 <div class="btn-group pull-right">
-  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+  <!-- <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
     <i class="fa fa-download"></i> Descargar <span class="caret"></span>
-  </button>
+  </button> -->
   <ul class="dropdown-menu" role="menu">
-    <li><a href="report/history-word.php?id=<?php echo $product->id;?>&stock_id=<?php echo $_GET["stock"];?>">Word 2007 (.docx)</a></li>
+    <!-- <li><a href="report/history-word.php?id=<?php echo $product->id;?>&stock_id=<?php echo $_GET["stock"];?>">Word 2007 (.docx)</a></li> -->
   </ul>
 </div>
 <h1><?php echo $product->name;; ?> <small>Historial</small></h1>
@@ -37,15 +37,15 @@ $itotal = OperationData::GetInputQByStock($product->id,$stock->id);
 
 	?>
 
-<div class="small-box bg-aqua">
-                <div class="inner">
-                  <h3><?php echo $itotal; ?></h3>
-                  <p>Entradas</p>
-                </div>
-                <div class="icon">
-                  <i class="fa fa-usd"></i>
-                </div>
-              </div>
+<!-- <div class="small-box bg-aqua"> -->
+                <!-- <div class="inner"> -->
+                  <!-- <h3><?php echo $itotal; ?></h3> -->
+                  <!-- <p>Entradas</p> -->
+                <!-- </div> -->
+                <!-- <div class="icon"> -->
+                  <!-- <i class="fa fa-usd"></i> -->
+                <!-- </div> -->
+              <!-- </div> -->
 
 
 <?php
@@ -82,15 +82,15 @@ $ototal = -1*OperationData::GetOutputQYesF($product->id);
 
 	?>
 
-<div class="small-box bg-yellow">
-                <div class="inner">
-                  <h3><?php echo $ototal; ?></h3>
-                  <p>Salidas</p>
-                </div>
-                <div class="icon">
-                  <i class="fa fa-shopping-cart"></i>
-                </div>
-              </div>
+<!-- <div class="small-box bg-yellow"> -->
+                <!-- <div class="inner"> -->
+                  <!-- <h3><?php echo $ototal; ?></h3> -->
+                  <!-- <p>Salidas</p> -->
+                <!-- </div> -->
+                <!-- <div class="icon"> -->
+                  <!-- <i class="fa fa-shopping-cart"></i> -->
+                <!-- </div> -->
+              <!-- </div> -->
 </div>
 </div>
 <div class="row">
@@ -106,28 +106,27 @@ $ototal = -1*OperationData::GetOutputQYesF($product->id);
 			<thead>
 			<th></th>
 			<th>Cantidad</th>
-			<th>Venta/Compra/Traspaso</th>
+			
 			<th>Tipo</th>
 			<th>Fecha</th>
-			<th></th>
+			
 			</thead>
 			<?php foreach($operations as $operation):?>
 			<tr>
 			<td></td>
 			<td><?php echo $operation->q; ?></td>
-			<td>
-				<?php if($operation->operation_type_id==1 && $operation->sell_id!="" && !$operation->is_traspase):?>
+		
+
+			<td><?php echo $operation->getOperationType()->name; ?>
+			<?php if($operation->operation_type_id==1 && $operation->sell_id!="" && !$operation->is_traspase):?>
 					<a href='./?view=onere&id=<?php echo $operation->sell_id; ?>'>#<?php echo $operation->sell_id;?></a>
 				<?php elseif($operation->operation_type_id==2 && $operation->sell_id!="" && !$operation->is_traspase):?>
 					<a href='./?view=onesell&id=<?php echo $operation->sell_id; ?>'>#<?php echo $operation->sell_id;?></a>
 				<?php elseif($operation->operation_type_id==6 && $operation->sell_id!="" && $operation->is_traspase):?>
 					<a href='./?view=onetraspase&id=<?php echo $operation->sell_id; ?>'>#<?php echo $operation->sell_id;?></a>
-				<?php endif; ?>
-			</td>
-
-			<td><?php echo $operation->getOperationType()->name; ?></td>
+				<?php endif; ?></td>
 			<td><?php echo $operation->created_at; ?></td>
-			<td style="width:40px;"><a href="#" id="oper-<?php echo $operation->id; ?>" class="btn tip btn-xs btn-danger" title="Eliminar"><i class="glyphicon glyphicon-trash"></i></a> </td>
+			
 			<script>
 			$("#oper-"+<?php echo $operation->id; ?>).click(function(){
 				x = confirm("Estas seguro que quieres eliminar esto ??");
