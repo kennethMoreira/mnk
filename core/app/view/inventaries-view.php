@@ -22,17 +22,11 @@ if(count($products)>0){
     <h3 class="box-title">Inventario Global</h3>
 
   </div><!-- /.box-header -->
-  <div class=" table table-responsive  box-body">
-  <table class="table-condensed table-bordered datatable table-hover">
+  <div class="box-body">
+  <table class="table table-bordered datatable table-hover">
 	<thead>
 		<th>Codigo</th>
-		<th>Producto</th>
-    <th>Marca</th>
-    <!-- <th>Categoria</th>
-    <th>Tipo</th> -->
-    <th>Modelo</th>
-    
-    
+		<th>Nombre</th>
     <?php foreach($sucursales as $suc):?>
 		<th><?php echo $suc->name; ?></th>
     <?php endforeach; ?>
@@ -40,21 +34,14 @@ if(count($products)>0){
 	</thead>
 	<?php foreach($products as $product):?>
 	<tr>
+  <?php $total=0; ?>
 		<td><?php echo $product->code; ?></td>
-		<td><?php echo $product->name; ?></td> <?php $total=0; ?>
-    
-      
-
-
-    <td><?php if($product->brand_id!=null){echo $product->getBrand()->name;}else{ echo "----"; }  ?></td>
-    <!-- <td><?php if($product->category_id!=null){echo $product->getCategory()->name;}else{ echo "----"; }  ?></td>
-    <td><?php echo $product->kind; ?></td> -->
-    <td><?php echo $product->barcode; ?></td>
+		<td><?php echo $product->name; ?></td>
     <?php foreach($sucursales as $suc):?>
 		<td>
 			<?php 
   $q=OperationData::getQByStock($product->id,$suc->id);
-  $total=$total + $q ;
+      $total=$total + $q ;
       echo $q; ?>
 		</td>
     <?php endforeach; ?>
@@ -104,9 +91,6 @@ var columns = [
 //    {title: "Reten", dataKey: "reten"},
     {title: "Codigo", dataKey: "code"}, 
     {title: "Nombre del Producto", dataKey: "product"}, 
-    {title: "Marca", dataKey: "brand_id"}, 
-    // {title: "Modelo", datakey: "category_id"},
-    // {title: "Tipo", datakey: "kind"},
     <?php foreach($sucursales as $suc):?>
     {title: "<?php echo $suc->name; ?>", dataKey: "suc-<?php echo $suc->id; ?>"}, 
 
@@ -122,9 +106,6 @@ var rows = [
     {
       "code": "<?php echo $product->code; ?>",
       "product": "<?php echo $product->name; ?>",
-      "brand_id":"<?php if($product->brand_id!=null){echo $product->getBrand()->name;}else{ echo "----"; }  ?>",
-      // "category_id":"<?php if($product->category_id!=null){echo $product->getCategory()->name;}else{ echo "----"; }  ?>",
-      // "kind":"<?php echo $product->kind;?>",
     <?php foreach($sucursales as $suc):
       $q=OperationData::getQByStock($product->id,$suc->id);?>
       "suc-<?php echo $suc->id; ?>": "<?php echo $q;?>",
