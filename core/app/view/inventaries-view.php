@@ -14,6 +14,7 @@
 <?php
 $products = ProductData::getAll();
 $sucursales = StockData::getAll();
+
 if(count($products)>0){
 	?>
 <div class="clearfix"></div>
@@ -38,7 +39,10 @@ if(count($products)>0){
   <?php $total=0; ?>
 		<td><?php echo $product->code; ?></td>
 		<td><?php echo $product->name; ?></td>
-    <td><?php if($product->brand_id!=null){echo $product->getBrand()->name;}else{ echo "----"; }  ?></td>
+    <?php foreach(BrandData::getAll() as $category):?>
+      <option value="<?php echo $category->id;?>" <?php if($product->brand_id!=null&& $product->brand_id==$category->id){ echo "---";}?>><?php echo $category->name;?></option>
+    <?php endforeach;?>
+       
     <?php foreach($sucursales as $suc):?>
 		<td>
 			<?php 
