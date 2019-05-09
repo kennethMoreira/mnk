@@ -1,7 +1,5 @@
 /*
-* Modelo de base de datos del sistema Inventio Max version 8
-* @author evilnapsis
-* @url http://evilnapsis.com/product/inventio-max
+
 */
 create table user(
 	id int not null auto_increment primary key,

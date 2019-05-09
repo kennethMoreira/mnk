@@ -79,12 +79,10 @@ COC1,Coca cola,8,11,5,100
 PEP1,Pepsi,7,10,10,100
 </pre>
 <h4>Clientes y proveedores</h4>
-<p>Orden de los datos [Rut/Rfc, Nombre, Apellidos, Direccion, Email, Telefono]</p>
+<p>Orden de los datos [CI/RUC, Nombre, Apellidos, Direccion, Email, Telefono]</p>
 <p class="text-muted">Debe tener cuidado de no incluir comas extra(,) en ninguno de los campos</p>
 <pre>
-RAEA050892,Agustin,Ramos Escalante,Tabasco , evilnapsis@gmail.com, +52 1 914 1183199
-RAES161295,Sebastian,Ramos Escalante,Mexico ,,
-RAEL250901,Leonardo,Ramos Escalante,Mexico ,,
+
 </pre>
 
       </div>
