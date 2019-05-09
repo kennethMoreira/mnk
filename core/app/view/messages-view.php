@@ -67,7 +67,7 @@ $inbox = MessageData::getInboxByUserId($_SESSION["user_id"]);
                 </button>
               </div>
             </div>
-            <div class="box-body no-padding">
+            <div class="box-body table-responsive no-padding">
               <ul class="nav nav-pills nav-stacked">
                 <li ><a href="./?view=messages&opt=all"><i class="fa fa-inbox"></i> Bandeja de entrada</a></li>
               </ul>
@@ -88,7 +88,7 @@ $inbox = MessageData::getInboxByUserId($_SESSION["user_id"]);
               <!-- /.box-tools -->
             </div>
             <!-- /.box-header -->
-            <div class="box-body">
+            <div class="box-body table-responsive">
 
               <div class="table-responsive mailbox-messages">
               <?php if(count($inbox)>0):?>
@@ -206,7 +206,7 @@ else if($i->user_to!=$_SESSION["user_id"]){ $theother=$i->user_to;}?>
                 </button>
               </div>
             </div>
-            <div class="box-body no-padding">
+            <div class="box-body table-responsive no-padding">
               <ul class="nav nav-pills nav-stacked">
                 <li ><a href="./?view=messages&opt=all"><i class="fa fa-inbox"></i> Bandeja de entrada</a></li>
               </ul>
@@ -227,7 +227,7 @@ else if($i->user_to!=$_SESSION["user_id"]){ $theother=$i->user_to;}?>
               <h3 class="box-title">Mensajes</h3>
 
             </div>
-            <div class="box-body chat" id="chat-box">
+            <div class="box-body table-responsive chat" id="chat-box">
               <!-- chat item -->
               <?php foreach($messages as $msg):
               $from = $msg->getFrom();

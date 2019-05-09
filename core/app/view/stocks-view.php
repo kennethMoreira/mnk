@@ -17,7 +17,7 @@
     <h3 class="box-title">Sucursal</h3>
 
   </div><!-- /.box-header -->
-  <div class="box-body no-padding">
+  <div class="box-body table-responsive no-padding">
 
 			<table class="table table-bordered table-hover">
 			<thead>

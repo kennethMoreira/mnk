@@ -24,7 +24,7 @@
     <h3 class="box-title">Categorias</h3>
 	
   </div><!-- /.box-header -->
-  <div class="box-body">
+  <div class="box-body table-responsive">
 
 			<table class="table table-bordered datatable table-hover">
 			<thead>

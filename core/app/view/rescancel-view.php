@@ -43,7 +43,7 @@ if(count($products)>0){
 <div class="box box-primary">
 <div class="box-header">
 <h3 class="box-title">Ventas</h3></div>
-<div class="box-body">
+<div class="box-body table-responsive">
 <table class="table table-bordered table-hover table-responsive datatable	">
 	<thead>
 		<th></th>

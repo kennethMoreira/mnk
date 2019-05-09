@@ -29,7 +29,7 @@ if(count($products)>0){
     <h3 class="box-title">Valor del Inventario</h3>
 
   </div><!-- /.box-header -->
-  <div class="box-body">
+  <div class="box-body table-responsive">
   <table class="table table-bordered datatable table-hover">
 	<thead>
 		<th>Codigo</th>

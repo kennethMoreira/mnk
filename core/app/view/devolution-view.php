@@ -74,7 +74,7 @@ $user = $sell->getUser();
 	}
 	?>
 </table>
-<div class="box-body">
+<div class="box-body table-responsive">
 <br><input type="submit" value="Realizar Devolucion" class="btn btn-primary">
 <a href="./?view=dev" class="btn btn-danger" >Cancelar</a>
 </div>

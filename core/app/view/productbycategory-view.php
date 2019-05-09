@@ -24,7 +24,7 @@ if(count($products)>0){
     <h3 class="box-title">Productos</h3>
 
   </div><!-- /.box-header -->
-  <div class="box-body no-padding">
+  <div class="box-body table-responsive no-padding">
 
 <table class="table table-bordered table-hover">
 	<thead>

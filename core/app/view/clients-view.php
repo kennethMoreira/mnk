@@ -21,7 +21,7 @@
 			// si hay usuarios
 			?>
 <div class="box box-primary">
-<div class="box-body">
+<div class="box-body table-responsive">
 			<table class="table table-bordered datatable table-hover">
 			<thead>
 			<th>RFC/RUT</th>

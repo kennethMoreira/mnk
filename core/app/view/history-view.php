@@ -101,7 +101,7 @@ $ototal = -1*OperationData::GetOutputQYesF($product->id);
     <h3 class="box-title">Historial</h3>
 
   </div><!-- /.box-header -->
-  <div class="box-body no-padding">
+  <div class="box-body table-responsive no-padding">
 			<table class="table table-bordered table-hover">
 			<thead>
 			<th></th>
