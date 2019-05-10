@@ -24,13 +24,15 @@ $categories = CategoryData::getAll();
   </div> -->
 
   <div class="form-group">
-    <label for="inputEmail1" class="col-lg-3 control-label">Imagen</label>
+    <label for="inputEmail1" class="col-lg-3 control-label">Producto</label>
     <div class="col-md-6">
-      <input type="file" name="image" id="image" placeholder="">
+      <input type="text" name="name" required class="form-control" id="name" placeholder="Nombre del Producto" autofocus>
     </div>
   </div>
+
+  
   <div class="form-group">
-    <label for="inputEmail1" class="col-lg-3 control-label">Codigo</label>
+    <label for="inputEmail1" class="col-lg-3 control-label">Codigo/Modelo</label>
     <div class="col-md-6">
       <input type="text" name="code" id="product_code" class="form-control" id="barcode" placeholder="Codigo Interno">
     </div>
@@ -42,12 +44,7 @@ $categories = CategoryData::getAll();
       <input type="text" name="barcode" id="product_code" class="form-control" id="barcode" placeholder="Codigo de Barras del Producto">
     </div>
   </div>
-  <div class="form-group">
-    <label for="inputEmail1" class="col-lg-3 control-label">Nombre</label>
-    <div class="col-md-6">
-      <input type="text" name="name" required class="form-control" id="name" placeholder="Nombre del Producto" autofocus>
-    </div>
-  </div>
+  
   <!-- <div class="form-group">
     <label for="inputEmail1" class="col-lg-3 control-label">Categoria</label>
     <div class="col-md-6">
@@ -134,7 +131,12 @@ $categories = CategoryData::getAll();
       
     </div>
   </div>
-
+  <div class="form-group">
+    <label for="inputEmail1" class="col-lg-3 control-label">Imagen</label>
+    <div class="col-md-6">
+      <input type="file" name="image" id="image" placeholder="">
+    </div>
+  </div>
 
   <!--<div class="form-group">-->
   <!--  <label for="inputEmail1" class="col-lg-3 control-label">Inventario inicial:</label>-->

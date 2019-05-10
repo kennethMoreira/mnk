@@ -26,8 +26,8 @@ if(count($products)>0){
   <div class="box-body table-responsive">
   <table class="table table-bordered datatable table-hover">
 	<thead>
-		<th>Codigo</th>
-		<th>Nombre</th>
+		<th>Codigo/Modelo</th>
+		<th>Producto</th>
     <th>Marca</th>
     <?php foreach($sucursales as $suc):?>
 		<th><?php echo $suc->name; ?></th>

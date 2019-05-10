@@ -41,9 +41,9 @@ if(count($products)>0){
 <div class="box-body table-responsive">
 <table class="table  table-bordered datatable table-hover">
 	<thead>
-		<th>Codigo</th>
+		<th>Codigo/Modelo</th>
 		<th>Imagen</th>
-		<th>Nombre</th>
+		<th>Producto</th>
     <th>Marca</th>
 		<th>Precio Entrada</th>
 		<th>Precio Salida</th>

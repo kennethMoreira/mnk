@@ -30,7 +30,7 @@ if($product!=null):
   </div>
 
   <div class="form-group">
-    <label for="inputEmail1" class="col-lg-3 control-label">Codigo</label>
+    <label for="inputEmail1" class="col-lg-3 control-label">Codigo/Modelo</label>
     <div class="col-md-6">
       <input type="text" name="code" class="form-control" id="code" value="<?php echo $product->code; ?>" placeholder="Codigo Interno del Producto">
     </div>
@@ -38,13 +38,13 @@ if($product!=null):
 
 
   <div class="form-group">
-    <label for="inputEmail1" class="col-lg-3 control-label">Codigo de barras*</label>
+    <label for="inputEmail1" class="col-lg-3 control-label">Codigo de barras</label>
     <div class="col-md-6">
       <input type="text" name="barcode" class="form-control" id="barcode" value="<?php echo $product->barcode; ?>" placeholder="Codigo de barras del Producto">
     </div>
   </div>
     <div class="form-group">
-    <label for="inputEmail1" class="col-lg-3 control-label">Nombre*</label>
+    <label for="inputEmail1" class="col-lg-3 control-label">Producto*</label>
     <div class="col-md-6">
       <input type="text" name="name" class="form-control" id="name" value="<?php echo $product->name; ?>" placeholder="Nombre del Producto">
     </div>
@@ -79,13 +79,13 @@ if($product!=null):
   </div>
 
   <div class="form-group">
-    <label for="inputEmail1" class="col-lg-3 control-label">Precio de Entrada*</label>
+    <label for="inputEmail1" class="col-lg-3 control-label">Precio de Entrada</label>
     <div class="col-md-6">
       <input type="text" name="price_in" class="form-control" value="<?php echo $product->price_in; ?>" id="price_in" placeholder="Precio de entrada">
     </div>
   </div>
   <div class="form-group">
-    <label for="inputEmail1" class="col-lg-3 control-label">Precio de Salida*</label>
+    <label for="inputEmail1" class="col-lg-3 control-label">Precio de Salida</label>
     <div class="col-md-6">
       <input type="text" name="price_out" class="form-control" id="price_out" value="<?php echo $product->price_out; ?>" placeholder="Precio de salida">
     </div>
