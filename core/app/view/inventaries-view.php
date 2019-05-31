@@ -108,6 +108,8 @@ var columns = [
     {title: "<?php echo $suc->name; ?>", dataKey: "suc-<?php echo $suc->id; ?>"}, 
 
     <?php endforeach; ?>
+    {title: "Total", dataKey: "total"}, 
+
 //    ...
 ];
 
@@ -120,9 +122,11 @@ var rows = [
       "code": "<?php echo $product->code; ?>",
       "product": "<?php echo $product->name; ?>",
     <?php foreach($sucursales as $suc):
-      $q=OperationData::getQByStock($product->id,$suc->id);?>
+      $q=OperationData::getQByStock($product->id,$suc->id);
+      $total=$total + $q ;?>
       "suc-<?php echo $suc->id; ?>": "<?php echo $q;?>",
       <?php endforeach; ?>
+      "total":"<?php echo $total?>",
       },
  <?php endforeach; ?>
 ];
