@@ -1,5 +1,5 @@
 <?php
-date_default_timezone_set('America/Mexico_City');
+date_default_timezone_set('America/America/Guayaquil');
 if(isset($_SESSION["user_id"])){ 
 	Core::$user = UserData::getById($_SESSION["user_id"]); 
 	Core::$symbol = ConfigurationData::getByPreffix("currency")->val;
